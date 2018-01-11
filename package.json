@@ -1,6 +1,6 @@
 {
   "name": "xazure-cms-module-posts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Provides blog post functionality for Xazure CMS.",
   "main": "dist",
   "scripts": {
@@ -18,8 +18,8 @@
   "author": "Christian Snodgrass <christian.snodgrass.open@gmail.com> (http://xazure.net)",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/samanime/xazure-cms-module-posts.git"
+    "type": "git",
+    "url": "https://github.com/samanime/xazure-cms-module-posts.git"
   },
   "bugs": {
     "url": "https://github.com/samanime/xazure-cms-module-posts/issues"

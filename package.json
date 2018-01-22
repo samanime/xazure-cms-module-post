@@ -1,6 +1,6 @@
 {
   "name": "xazure-module-posts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Provides blog post functionality for Xazure framework.",
   "main": "dist",
   "scripts": {

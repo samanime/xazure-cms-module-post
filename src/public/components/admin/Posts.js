@@ -26,7 +26,7 @@ export default async () => {
       getAuthorById(id) {
         return this.authors.find(a => a._id === id).displayName;
       },
-      getTypeDisplay(type) {
+      getType(type) {
         return this.types[type];
       },
       async getTypes() {
@@ -54,7 +54,8 @@ export default async () => {
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">Name</th>    
+                <th scope="col">Name</th>
+                <th scope="col">Slug</th>
                 <th scope="col">Type</th>        
                 <th scope="col">Status</th>            
                 <th scope="col">Publish Date</th>            
@@ -65,9 +66,10 @@ export default async () => {
             <tbody>
                 <tr v-for="{ title, type, slug, _id, authorId, publishTime, creationTime } in posts">
                   <td>
-                    <router-link :to="buildLink('/' + _id)">{{title}}</router-link>
+                    <router-link :to="buildLink('/' + _id)">{{ title }}</router-link>
                   </td>
-                  <td>{{ getTypeDisplay(type) }}</td>
+                  <td>{{ getType(type).name }}</td>
+                  <td>{{ slug }}</td>
                   <td>
                     <span v-if="!publishTime">Draft</span>
                     <span v-else-if="publishTime && new Date(publishTime) <= new Date()">Published</span>

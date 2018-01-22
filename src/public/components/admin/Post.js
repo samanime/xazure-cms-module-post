@@ -97,7 +97,6 @@ export default async () => {
         }
       },
       afterEnter(el) {
-        console.log(el);
         el.classList.add('show');
       },
       async onSubmit() {
@@ -111,7 +110,6 @@ export default async () => {
             this.alert = null;
             this.error = `Failed to save. Server returned ${status}${error ? `: ${error}` : ''}`;
           } else {
-            console.log('router');
             this.id = postId;
             this.$router.push({ path: `/posts/${this.id}` });
             this.error = null;
@@ -163,7 +161,7 @@ export default async () => {
           <div class="form-group mb-4">
             <label id="type">Type: </label> 
             <select id="type" class="form-control" v-model="type">
-              <option v-for="(display, type) in types" :value="type">{{ display }}</option>
+              <option v-for="({ name }, type) in types" :value="type">{{ name }}</option>
             </select>          
           </div>
           <div class="row">
